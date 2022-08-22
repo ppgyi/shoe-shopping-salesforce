@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Shopping Cart" icon-name="custom:custom14">
+      <div class="container">
+        <template for:each={productsInCart} for:item="product">
+            <div key={product.ID__c} class="product">
+                <div class="name">{product.Name}</div>
+                <div class="description">{product.Description__c}</div>
+                <div class="img"><img src={product.Image_URL__c}/></div>
+                <div class="category">Category: {product.Category__c}</div>
+                <div class="color">Color: {product.Color__c}</div>
+                <div class="price">Price: {product.Price__c}</div>
+            </div>     
+        </template>
+        <div class="product"><input type="button" class="button" value="Make an order" onclick={makeAnOrder}></div>
+      </div>
+    </lightning-card>
+ </template>

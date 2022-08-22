@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="ShoeShopping" icon-name="custom:custom14">
+      <div class="container">
+        <c-filter onclicked={handleClicked}></c-filter>
+        <template if:true={noFilter} for:each={products.data} for:item="product">
+            <div key={product.ID__c} class="product">
+                <div class="name">{product.Name}</div>
+                <div class="description">{product.Description__c}</div>
+                <div class="img"><img src={product.Image_URL__c}/></div>
+                <div class="category">Category: {product.Category__c}</div>
+                <div class="color">Color: {product.Color__c}</div>
+                <div class="price">Price: {product.Price__c}</div>
+                <div ><input type="button" class="button" value="Add to cart" data-id={product.ID__c} onclick={addToCart}></div>
+            </div>     
+        </template>
+        <template if:false={noFilter} for:each={productsFilterNew} for:item="product">
+          <div key={product.ID__c} class="product">
+              <div class="name">{product.Name}</div>
+              <div class="description">{product.Description__c}</div>
+              <div class="img"><img src={product.Image_URL__c}/></div>
+              <div class="category">Category: {product.Category__c}</div>
+              <div class="color">Color: {product.Color__c}</div>
+              <div class="price">Price: {product.Price__c}</div>
+              <div ><input type="button" class="button" value="Add to cart" data-id={product.ID__c} onclick={addToCart}></div>
+          </div>     
+      </template>
+      <c-shoppingcart products-in-cart={productsInCart} onmakeanorder={sendRecords}></c-shoppingcart>
+      </div>
+    </lightning-card>
+ </template>

@@ -1,0 +1,47 @@
+.container {
+    background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.7));
+}
+
+.area {
+    display: inline-block;
+    margin: 5%; 
+    text-align: center;
+}
+
+.product {
+    display: inline-block;
+    margin: 5%; 
+    text-align: center;
+}
+
+.name {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.description {
+    color: white;
+    font-size: 16x;
+    margin-bottom: 10%;
+}
+
+.category {
+    color: white;
+}
+
+.color {
+    color: white;
+}
+
+.price {
+    color: white;
+}
+
+.button {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+}

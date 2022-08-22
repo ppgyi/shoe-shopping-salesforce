@@ -1,0 +1,19 @@
+<template>
+      <div class="container">
+        <div class="area">
+            <p>Filter by:</p>
+        </div>
+        <div class="area">
+            <select class="slds-select" onchange={changeHandlerSelect}>
+                <option value="">select one...</option>
+                <option value="Category">category</option>
+                <option value="Color">color</option>
+                <option value="Price" >price</option>
+            </select>
+        </div>
+        <div class="area">
+            <lightning-input onchange={changeHandler}></lightning-input>
+        </div>
+        <div class="area"><input type="button" class="button" value="Search" onclick={clicked}></div>
+      </div>
+ </template>
